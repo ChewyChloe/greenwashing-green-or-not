@@ -1,7 +1,7 @@
 # 揭開綠鏡 Green or Not
 
 這是一個以「揭露漂綠（Greenwashing）」為主題的互動式專題網頁，透過復古像素（Pixel Art）與系統終端機診斷的視覺風格，帶領使用者拆解企業在行銷與公關包裝下的「綠色濾鏡」，並提供查證工具與反漂綠角色測驗。
-* **網址[漂綠]**(https://codepen.io/ChewyChloe/full/azBLpPx)
+* **網址**[**漂綠**](https://codepen.io/ChewyChloe/full/azBLpPx)
 
 ## 網站架構與核心功能
 
