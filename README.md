@@ -1,6 +1,42 @@
-# 網頁設計期末作業113403001
+# 揭開綠鏡 Green or Not
 
-A Pen created on CodePen.
+這是一個以「揭露漂綠（Greenwashing）」為主題的互動式專題網頁，透過復古像素（Pixel Art）與系統終端機診斷的視覺風格，帶領使用者拆解企業在行銷與公關包裝下的「綠色濾鏡」，並提供查證工具與反漂綠角色測驗。
+* **網址[漂綠]**(https://codepen.io/ChewyChloe/full/azBLpPx)
 
-Original URL: [https://codepen.io/ChewyChloe/pen/azBLpPx](https://codepen.io/ChewyChloe/pen/azBLpPx).
+## 網站架構與核心功能
 
+* **首頁互動（Home & Magnifier）**
+* **放大鏡透視效果**：跟隨滑鼠移動的圓形遮罩（`clip-path`），將表面上的環保行銷口號（如「天然、環保」、「使用再生塑料」）透視還原為背後的真相（如「僅 1% 的材料真正可回收」、「內含不可回收的複合材料」）。
+* **動態跑馬燈與像素 UI**：結合像素卡片、視窗化資訊框（`Greenwashing_Info.exe`）與互動式導覽麵包屑（Breadcrumb）。
+
+
+* **漂綠概念解析（Intro）**
+* 介紹「漂綠」的定義、歷史起源（1986 年生態學家 Jay Westerveld 提出），以及五大常見手法：**隱藏交易、模糊詞彙、缺乏證據、選擇性揭露、碳抵換陷阱**（包含微軟 AI 資料中心碳排爭議案例）。
+
+
+* **三大產業深入案例（Case Studies）**
+1. **快時尚（Fast Fashion）**：剖析「永續系列」、「環保材質」與「舊衣回收」背後的過度生產問題，並以收據形式呈現 **SHEIN** 遭法國與義大利主管機關裁罰的時序紀錄。
+2. **化石燃料（Fossil Fuels）**：以系統黑盒掃描（`energy_control.exe`）揭露石油與航空業的「低碳能源展示」、「天然氣過渡橋樑」及「淨零承諾」話術，並收錄 **Shell（殼牌）** 碳中和廣告敗訴案例。
+3. **金融與 ESG 投資（Finance & ESG）**：模擬金融結帳櫃檯與投資 App 介面，點出 ESG 基金、綠色債券的資訊不透明問題，並以 **DWS** 遭美國 SEC 裁罰為例說明「ESG 寫進簡報不等於寫進投資流程」。
+
+
+* **解方與行動（Solutions & Tools）**
+* **四維度解析資料夾**：從「政府法規（含台灣公平交易法與歐盟指令）」、「消費者判斷」、「企業合規」與「社會行動」切入探討應對策略。
+* **五題快速掃描檢查工具**：協助使用者檢視綠色宣稱是否具備具體數據、比例、方法、第三方驗證與實際行動。
+* **外部查證資源推薦**：串接 [透明足跡](https://thaubing.gcaa.org.tw/)、[淨零綠生活資訊平台](https://greenlifestyle.moenv.gov.tw/) 與紀錄片 [《非買不可：消費大陰謀》](https://www.netflix.com/tw/title/81554996)。
+
+
+* **反漂綠命定角色測驗（Greenwash Quiz）**
+* 透過互動式問答，測出使用者的「綠鏡研究員」類型，強化反漂綠意識。
+
+
+
+## 技術棧與前端架構
+
+* **HTML / 模板語法**：Pug（使用縮排語法撰寫結構化 DOM 元素與無障礙屬性 `aria-label`）。
+* **CSS / 預處理器**：Sass（採用縮排語法、變數管理色彩系統，並定義 `@mixin gw-pixel-card` 與 `gw-pixel-button` 等像素風元件樣式）。
+* **字體設計**：載入 Google Fonts（`Libre Barcode 128`、`VT323`）以及開源繁體中文像素字體 **Cubic 11（俐方體 11 號）**。
+* **JavaScript 與套件**：
+* **jQuery** & **Bootstrap**：處理互動邏輯、頁籤切換與響應式排版。
+* **Plotly.js**：用於渲染頁面中的數據視覺化圖表。
+* **原生 DOM API**：實作滑鼠追蹤放大鏡效果（`mousemove` + `clipPath`）與小幫手（Clippy）圖片 Hover 狀態切換。
